@@ -2,11 +2,14 @@ function ExecuteScript(strId)
 {
   switch (strId)
   {
-      case "5oeLFMIC5b4":
+      case "6YJ87dc96mL":
         Script1();
         break;
-      case "5udLkmpEf8m":
+      case "5csv5UcEVhT":
         Script2();
+        break;
+      case "640an0XfHUd":
+        Script3();
         break;
   }
 }
@@ -28,15 +31,19 @@ var slideWidth = player.slideWidth;
 var slideHeight = player.slideHeight;
 window.Script1 = function()
 {
-  const target = object('6FmmXRouumQ');
+  const target = object('5lHjUH05cNL');
 const duration = 750;
-const easing = 'cubic-bezier(0.25, 1, 0.5, 1)';
-const id = '6mIWJYJOuI9';
-const growAmount = 1.2;
+const easing = 'ease-out';
+const id = '6mu98TBUFYu';
+const pulseAmount = 0.07;
 player.addForTriggers(
 id,
 target.animate(
-player.emphasis.elastic(growAmount)
+[ {scale: '1' }, 
+{scale: `${1 + pulseAmount}` }, 
+{scale: '1' }, 
+{scale: `${1 + pulseAmount}` }, 
+{scale: '1' } ]
 ,
   { fill: 'forwards', duration, easing }
 )
@@ -45,15 +52,40 @@ player.emphasis.elastic(growAmount)
 
 window.Script2 = function()
 {
-  const target = object('6JbX7Gx0ao8');
+  const target = object('6beSPIpVmW0');
 const duration = 750;
-const easing = 'cubic-bezier(0.25, 1, 0.5, 1)';
-const id = '6gEThkUeEyU';
-const growAmount = 1.2;
+const easing = 'ease-out';
+const id = '5r1mbJmuFFX';
+const pulseAmount = 0.07;
 player.addForTriggers(
 id,
 target.animate(
-player.emphasis.elastic(growAmount)
+[ {scale: '1' }, 
+{scale: `${1 + pulseAmount}` }, 
+{scale: '1' }, 
+{scale: `${1 + pulseAmount}` }, 
+{scale: '1' } ]
+,
+  { fill: 'forwards', duration, easing }
+)
+);
+}
+
+window.Script3 = function()
+{
+  const target = object('5kIHo5BCsNI');
+const duration = 750;
+const easing = 'ease-out';
+const id = '6GUXNk2DUMU';
+const pulseAmount = 0.07;
+player.addForTriggers(
+id,
+target.animate(
+[ {scale: '1' }, 
+{scale: `${1 + pulseAmount}` }, 
+{scale: '1' }, 
+{scale: `${1 + pulseAmount}` }, 
+{scale: '1' } ]
 ,
   { fill: 'forwards', duration, easing }
 )
